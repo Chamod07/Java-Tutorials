@@ -12,15 +12,18 @@ public class Section1 {
             System.out.print("Enter mark "+(i+1)+": ");
             markArray[i] = Main.input.nextInt();
         }
-        System.out.print("Marks: ");
         short failed = 0;
-        int average;
+        int sum = 0;
+        double average;
+        System.out.print("Marks: ");
         for (int mark : markArray) {
             System.out.print(mark+" ");
             if (mark<40) failed += 1;
+            sum+=mark;
         }
+        average= (double) sum /markArray.length;
         System.out.println();
         System.out.println("Number of failed students = "+failed);
-
+        System.out.println("Average of the students' marks = "+average);
     }
 }
